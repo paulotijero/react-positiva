@@ -2,10 +2,16 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
+import Symbols from "./symbols";
 import Home from "../views/home";
 
 function App() {
-  return <Home />;
+  return (
+    <>
+      <Symbols />
+      <Home />
+    </>
+  );
 }
 
 export default App;
