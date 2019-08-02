@@ -100,10 +100,7 @@ function Footer() {
                 <use xlinkHref="#youtube" />
               </svg>
             </a>
-            <a
-              href="https://github.com/paulotijero/react-positiva"
-              target="_blank"
-            >
+            <a href="https://github.com/paulotijero/react-positiva">
               <svg>
                 <use xlinkHref="#github" />
               </svg>
