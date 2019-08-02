@@ -2,6 +2,14 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
+import ProgressBar from "./progress-bar";
+
+const container = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center"
+};
+
 const sentence = {
   fontSize: "20px",
   lineHeight: "26px",
@@ -26,13 +34,14 @@ const containerImg = {
 
 function BodyContent() {
   return (
-    <main>
+    <main css={container}>
       <div css={containerImg}>
         <img src="/car.jpg" alt="La Positiva" />
       </div>
       <p css={sentence}>
         Déjanos tus datos. ¡Nos pondremos en contacto contigo!
       </p>
+      <ProgressBar />
     </main>
   );
 }
