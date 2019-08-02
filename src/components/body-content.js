@@ -3,11 +3,21 @@ import React from "react";
 import { jsx } from "@emotion/core";
 
 import ProgressBar from "./progress-bar";
+import ApplicationForm from "./application-form";
+import OurService from "./our-service";
 
 const container = {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center"
+  alignItems: "center",
+  section: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: "80%",
+    "@media (max-width: 768px)": {
+      flexDirection: "column"
+    }
+  }
 };
 
 const sentence = {
@@ -42,6 +52,10 @@ function BodyContent() {
         Déjanos tus datos. ¡Nos pondremos en contacto contigo!
       </p>
       <ProgressBar />
+      <section>
+        <ApplicationForm />
+        <OurService />
+      </section>
     </main>
   );
 }
