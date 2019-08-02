@@ -1,8 +1,23 @@
+/** @jsx jsx */
 import React from "react";
 import { render } from "react-dom";
+import { Global, jsx } from "@emotion/core";
 
-function App() {
-  return <h1>LAB +</h1>;
-}
+import App from "./components/app";
 
-render(<App />, document.getElementById("root"));
+const $root = document.getElementById("root");
+
+render(
+  <>
+    <Global
+      styles={{
+        body: {
+          margin: 0,
+          fontFamily: "'Roboto', sans-serif"
+        }
+      }}
+    />
+    <App />
+  </>,
+  $root
+);
