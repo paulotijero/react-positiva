@@ -2,6 +2,8 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
+import { DataContext } from "../contexts/data";
+
 const container = {
   width: "50%",
   "@media (max-width: 768px)": {
@@ -53,42 +55,21 @@ const services = {
 };
 
 function OurService() {
+  const contextType = React.useContext(DataContext);
+  console.log(contextType);
   return (
     <div css={container}>
       <h1 css={title}>Resumen de servicios</h1>
       <div css={services}>
-        <div>
-          <img src="/car.jpg" alt="La Positiva" />
-          <p>Vehículo de reemplazo</p>
-          <p>
-            Hasta 15 días por choque y/o volcadura y 30 dias por robo total
-            acumulables al año
-          </p>
-        </div>
-        <div>
-          <img src="/car.jpg" alt="La Positiva" />
-          <p>Vehículo de reemplazo</p>
-          <p>
-            Hasta 15 días por choque y/o volcadura y 30 dias por robo total
-            acumulables al año
-          </p>
-        </div>
-        <div>
-          <img src="/car.jpg" alt="La Positiva" />
-          <p>Vehículo de reemplazo</p>
-          <p>
-            Hasta 15 días por choque y/o volcadura y 30 dias por robo total
-            acumulables al año
-          </p>
-        </div>
-        <div>
-          <img src="/car.jpg" alt="La Positiva" />
-          <p>Vehículo de reemplazo</p>
-          <p>
-            Hasta 15 días por choque y/o volcadura y 30 dias por robo total
-            acumulables al año
-          </p>
-        </div>
+        {contextType.data.map(service => {
+          return (
+            <div key={service.id}>
+              <img src={service.image} alt={service.name} />
+              <p>{service.name}</p>
+              <p>{service.description}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
