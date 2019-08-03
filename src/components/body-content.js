@@ -13,14 +13,15 @@ const container = {
   section: {
     display: "flex",
     justifyContent: "space-evenly",
-    width: "80%",
     "@media (max-width: 768px)": {
-      flexDirection: "column"
+      flexDirection: "column",
+      alignItems: "center"
     }
   }
 };
 
 const sentence = {
+  margin: "20px 10px",
   fontSize: "20px",
   lineHeight: "26px",
   textAlign: "center",

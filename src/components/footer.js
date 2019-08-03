@@ -46,7 +46,10 @@ const container = {
       }
     },
     div: {
-      margin: "10px"
+      margin: "10px",
+      ":last-child": {
+        margin: "0"
+      }
     },
     span: {
       display: "block"

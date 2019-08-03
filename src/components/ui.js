@@ -9,6 +9,8 @@ function Input({ styles, ...props }) {
         margin: "10px 0",
         width: "350px",
         height: "50px",
+        fontSize: "20px",
+        paddingLeft: "10px",
         border: "1px solid #D2D2D2",
         borderRadius: "8px",
         ":focus": {
@@ -18,6 +20,10 @@ function Input({ styles, ...props }) {
           paddingLeft: "10px",
           fontSize: "20px",
           color: "#D2D2D2"
+        },
+        "@media (max-width: 768px)": {
+          width: "300px",
+          height: "40px"
         },
         ...styles
       }}

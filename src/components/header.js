@@ -44,7 +44,7 @@ function Header() {
   return (
     <header css={container}>
       <img
-        src="http://c2c.kontactame.com/call/infraxion_lapositiva/images/positiva.png"
+        src="https://www.apeseg.org.pe/wp-content/uploads/2019/07/positiva.png"
         alt="La Positiva"
       />
       <a href="https://github.com/paulotijero/react-positiva">
