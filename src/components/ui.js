@@ -45,6 +45,9 @@ function Button({ styles, ...props }) {
         backgroundColor: "#ff6d46",
         color: "#fff",
         transition: "all 0.25s",
+        ":focus": {
+          outline: "none"
+        },
         ":hover": {
           backgroundColor: "#fff",
           color: "#ff6d46"
