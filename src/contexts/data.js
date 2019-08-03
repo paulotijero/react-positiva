@@ -6,8 +6,12 @@ const DataContext = React.createContext();
 
 function DataProvider(props) {
   const [data, setData] = React.useState([]);
-  const [step, setStep] = React.useState(1);
-  const [info, setInfo] = React.useState({});
+  const [step, setStep] = React.useState(
+    JSON.parse(localStorage.getItem("step") || 1)
+  );
+  const [info, setInfo] = React.useState(
+    JSON.parse(localStorage.getItem("info") || "{}")
+  );
 
   React.useEffect(() => {
     allServices().then(list => setData(list));
@@ -16,15 +20,21 @@ function DataProvider(props) {
   function handleSubmit(event) {
     event.preventDefault();
     setStep(step + 1);
+    localStorage.setItem("step", JSON.stringify(step + 1));
   }
 
   function handleChange(event) {
     setInfo({ ...info, [event.target.name]: event.target.value });
+    localStorage.setItem(
+      "info",
+      JSON.stringify({ ...info, [event.target.name]: event.target.value })
+    );
   }
 
   const value = {
     data: data,
     step: step,
+    info: info,
     handleSubmit: handleSubmit,
     handleChange: handleChange
   };

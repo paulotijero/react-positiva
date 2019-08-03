@@ -23,6 +23,7 @@ const withoutContainer = {
 
 function ApplicationForm() {
   const contextType = React.useContext(DataContext);
+  console.log(contextType.info.name);
 
   return (
     <>
@@ -34,6 +35,7 @@ function ApplicationForm() {
             placeholder="Nombre"
             name="name"
             onChange={contextType.handleChange}
+            value={contextType.info.name}
             required
           />
           <Label>Apellido</Label>
@@ -42,6 +44,7 @@ function ApplicationForm() {
             placeholder="Apellido"
             name="lastname"
             onChange={contextType.handleChange}
+            value={contextType.info.lastname}
             required
           />
         </div>
@@ -51,6 +54,7 @@ function ApplicationForm() {
             type="date"
             name="date"
             onChange={contextType.handleChange}
+            value={contextType.info.date}
             required={contextType.step === 2 ? true : false}
           />
           <Label>Dirección</Label>
@@ -59,6 +63,7 @@ function ApplicationForm() {
             placeholder="Dirección"
             name="address"
             onChange={contextType.handleChange}
+            value={contextType.info.address}
             required={contextType.step === 2 ? true : false}
           />
         </div>
@@ -71,6 +76,7 @@ function ApplicationForm() {
             maxLength="9"
             name="phone"
             onChange={contextType.handleChange}
+            value={contextType.info.phone}
             required={contextType.step === 3 ? true : false}
           />
           <Label>Correo electrónico</Label>
@@ -79,6 +85,7 @@ function ApplicationForm() {
             placeholder="ejemplo@correo.com"
             name="email"
             onChange={contextType.handleChange}
+            value={contextType.info.email}
             required={contextType.step === 3 ? true : false}
           />
         </div>
