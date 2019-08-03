@@ -21,9 +21,27 @@ const withoutContainer = {
   display: "none"
 };
 
+const message = {
+  ...container,
+  p: {
+    ":first-of-type": {
+      marginTop: "0",
+      fontSize: "28px",
+      fontWeight: "100",
+      textAlign: "center",
+      color: "#595959"
+    },
+    ":last-child": {
+      fontSize: "40px",
+      lineHeight: "25px",
+      textAlign: "center",
+      color: "#7878BE"
+    }
+  }
+};
+
 function ApplicationForm() {
   const contextType = React.useContext(DataContext);
-  console.log(contextType.info.name);
 
   return (
     <>
@@ -89,7 +107,19 @@ function ApplicationForm() {
             required={contextType.step === 3 ? true : false}
           />
         </div>
-        <Button>SIGUIENTE</Button>
+        <div css={contextType.step === 4 ? message : withoutContainer}>
+          <p>Gracias por confiar en nosotros</p>
+          <p>{contextType.info.name}</p>
+        </div>
+        <div css={container}>
+          <Button>
+            {contextType.step < 3
+              ? "SIGUIENTE"
+              : contextType.step < 4
+              ? "FINALIZAR"
+              : "ENVIAR OTRA RESPUESTA"}
+          </Button>
+        </div>
       </form>
     </>
   );

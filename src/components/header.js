@@ -43,10 +43,7 @@ const container = {
 function Header() {
   return (
     <header css={container}>
-      <img
-        src="https://www.apeseg.org.pe/wp-content/uploads/2019/07/positiva.png"
-        alt="La Positiva"
-      />
+      <img src="/positiva.png" alt="La Positiva" />
       <a href="https://github.com/paulotijero/react-positiva">
         <svg>
           <use xlinkHref="#github" />

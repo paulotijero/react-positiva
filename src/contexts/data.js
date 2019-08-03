@@ -19,8 +19,21 @@ function DataProvider(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    setStep(step + 1);
-    localStorage.setItem("step", JSON.stringify(step + 1));
+    if (step === 4) {
+      setInfo({
+        address: "",
+        date: "",
+        email: "",
+        lastname: "",
+        name: "",
+        phone: ""
+      });
+      setStep(1);
+      localStorage.clear();
+    } else {
+      setStep(step + 1);
+      localStorage.setItem("step", JSON.stringify(step + 1));
+    }
   }
 
   function handleChange(event) {

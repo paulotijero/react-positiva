@@ -13,9 +13,9 @@ const container = {
   section: {
     display: "flex",
     justifyContent: "space-evenly",
+    alignItems: "center",
     "@media (max-width: 768px)": {
-      flexDirection: "column",
-      alignItems: "center"
+      flexDirection: "column"
     }
   }
 };
