@@ -42,7 +42,6 @@ const message = {
 
 function ApplicationForm() {
   const contextType = React.useContext(DataContext);
-  console.log(contextType.info.name);
 
   return (
     <>
@@ -113,7 +112,13 @@ function ApplicationForm() {
           <p>{contextType.info.name}</p>
         </div>
         <div css={container}>
-          <Button>SIGUIENTE</Button>
+          <Button>
+            {contextType.step < 3
+              ? "SIGUIENTE"
+              : contextType.step < 4
+              ? "FINALIZAR"
+              : "ENVIAR OTRA RESPUESTA"}
+          </Button>
         </div>
       </form>
     </>
