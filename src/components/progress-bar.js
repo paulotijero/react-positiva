@@ -38,7 +38,7 @@ const line = {
   border: "1px solid #c4c4c4",
   backgroundColor: "#c4c4c4",
   "@media (max-width: 768px)": {
-    width: "50px"
+    width: "20px"
   }
 };
 
