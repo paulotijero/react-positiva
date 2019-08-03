@@ -56,7 +56,6 @@ const services = {
 
 function OurService() {
   const contextType = React.useContext(DataContext);
-  console.log(contextType);
   return (
     <div css={container}>
       <h1 css={title}>Resumen de servicios</h1>
