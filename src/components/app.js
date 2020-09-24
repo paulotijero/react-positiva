@@ -7,10 +7,10 @@ import Home from "../views/home";
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Symbols />
       <Home />
-    </>
+    </React.Fragment>
   );
 }
 

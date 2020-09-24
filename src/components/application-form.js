@@ -44,7 +44,7 @@ function ApplicationForm() {
   const contextType = React.useContext(DataContext);
 
   return (
-    <>
+    <React.Fragment>
       <form onSubmit={contextType.handleSubmit}>
         <div css={contextType.step === 1 ? container : withoutContainer}>
           <Label>Nombre</Label>
@@ -121,7 +121,7 @@ function ApplicationForm() {
           </Button>
         </div>
       </form>
-    </>
+    </React.Fragment>
   );
 }
 
