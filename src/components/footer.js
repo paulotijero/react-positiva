@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react";
 import { jsx } from "@emotion/core";
 
 const container = {
@@ -77,6 +76,7 @@ function Footer() {
             <a
               href="https://www.facebook.com/LaPositivaSeguros/"
               target="_blank"
+              rel="noopener noreferrer"  
             >
               <svg>
                 <use xlinkHref="#facebook" />
@@ -85,12 +85,17 @@ function Footer() {
             <a
               href="https://www.instagram.com/lapositivaseguros"
               target="_blank"
+              rel="noopener noreferrer"  
             >
               <svg>
                 <use xlinkHref="#instagram" />
               </svg>
             </a>
-            <a href="https://twitter.com/LAB_Positiva" target="_blank">
+            <a 
+              href="https://twitter.com/LAB_Positiva"
+              target="_blank"
+              rel="noopener noreferrer"  
+            >
               <svg>
                 <use xlinkHref="#twitter" />
               </svg>
@@ -98,6 +103,7 @@ function Footer() {
             <a
               href="https://www.youtube.com/channel/UCmZCrICnE6lh1JdHLbkZkEA"
               target="_blank"
+              rel="noopener noreferrer"  
             >
               <svg>
                 <use xlinkHref="#youtube" />

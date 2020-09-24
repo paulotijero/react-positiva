@@ -1,6 +1,7 @@
 import React from "react";
 
 import { allServices } from "../services/api";
+import dataJson from "../services/data.json"
 
 const DataContext = React.createContext();
 
@@ -15,7 +16,8 @@ function DataProvider(props) {
 
   React.useEffect(() => {
     allServices().then(list => setData(list));
-  }, []);
+    if(data.length === 0) setData(dataJson); // Access to fetch at 'https://challenge-labp.s3.amazonaws.com/services.json' from origin has been blocked by CORS 
+  }, [data.length]);
 
   function handleSubmit(event) {
     event.preventDefault();
