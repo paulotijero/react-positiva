@@ -3,7 +3,6 @@ import React from "react";
 import { jsx } from "@emotion/core";
 
 import { DataContext } from "../contexts/data";
-import data from "../services/data.json"
 
 const container = {
   width: "50%",
@@ -56,12 +55,12 @@ const services = {
 };
 
 function OurService() {
-  const contextType = React.useContext(DataContext); // Access to fetch at 'https://challenge-labp.s3.amazonaws.com/services.json' from origin has been blocked by CORS 
+  const contextType = React.useContext(DataContext); 
   return (
     <div css={container}>
       <h1 css={title}>Resumen de servicios</h1>
       <div css={services}>
-        {data.map(service => {
+        {contextType.data.map(service => {
           return (
             <div key={service.id}>
               <img src={service.image} alt={service.name} />
