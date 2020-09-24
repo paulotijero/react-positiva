@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bc5f670f-b6e0-45df-9a0e-026d015975ca/deploy-status)](https://app.netlify.com/sites/react-positiva/deploys)
 
-This is a challenge for Lab+
+This is a clon for Lab+
 
 ![](public/positiva.gif)
 
