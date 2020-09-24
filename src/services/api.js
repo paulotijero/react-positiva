@@ -1,3 +1,4 @@
+// Access to fetch at 'https://challenge-labp.s3.amazonaws.com/services.json' from origin has been blocked by CORS 
 const API_SERVICES_CONSUMER =
   "https://challenge-labp.s3.amazonaws.com/services.json";
 

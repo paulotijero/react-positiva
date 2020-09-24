@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Vehiculo de reemplazo",
+    "image": "https://challenge-labp.s3.amazonaws.com/ic-veh-culo-reemplazo.svg",
+    "description": "Hasta 15 días por choque y/o volcadura y 30 días por robo total acumulables al año."
+  },
+  {
+    "id": 2,
+    "name": "Chofer de reemplazo",
+    "image": "https://challenge-labp.s3.amazonaws.com/ic-chofer-reemplazo.svg",
+    "description": "Hasta 3 eventos."
+  },
+  {
+    "id": 3,
+    "name": "Auxilio mecánico",
+    "image": "https://challenge-labp.s3.amazonaws.com/ic-auxilio-mecanico.svg",
+    "description": "Hasta 3 eventos."
+  },
+  {
+    "id": 4,
+    "name": "Auxilio grúa",
+    "image": "https://challenge-labp.s3.amazonaws.com/ic-auxilio-grua.svg",
+    "description": "Hasta 3 eventos."
+  }
+]
